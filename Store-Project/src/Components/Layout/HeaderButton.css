@@ -2,7 +2,7 @@
   width: 155px;
   height: 50px;
   border: none;
-  border-radius: 0px;
+  border-radius: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,7 +20,6 @@
 .cart {
   z-index: 2;
 }
-
 .cartBtn:active {
   transform: scale(0.96);
 }
@@ -30,7 +29,7 @@
   width: 12px;
   border-radius: 3px;
   content: "";
-  left: 23px;
+  left: 30px;
   bottom: 23px;
   opacity: 0;
   z-index: 1;
@@ -67,4 +66,11 @@
     transform: translateX(0);
     opacity: 1;
   }
+}
+.badge{
+    background-color: #000000;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 25px;
+    margin-left: 0.25rem;
 }
