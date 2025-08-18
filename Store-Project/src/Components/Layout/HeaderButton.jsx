@@ -4,7 +4,7 @@ import "./HeaderButton.css"
 const HeaderButton = () => {
   return (
         <button className="cartBtn">
-            <span className="cart">
+            <span className="cart-icon">
                 <i className="fa-solid fa-cart-shopping"></i>
             </span>
             <span>Cart</span>

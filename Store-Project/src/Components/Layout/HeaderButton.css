@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-.cart {
+.cart-icon {
   z-index: 2;
 }
 .cartBtn:active {
@@ -52,7 +52,7 @@
   }
 }
 
-.cartBtn:hover .cart {
+.cartBtn:hover .cart-icon {
   animation: slide-in-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
@@ -68,7 +68,7 @@
   }
 }
 .badge{
-    background-color: #000000;
+    background-color: #46AEC4;
     padding: 0.5rem 1rem;
     font-weight: bold;
     border-radius: 25px;
