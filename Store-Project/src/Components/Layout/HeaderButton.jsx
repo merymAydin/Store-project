@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./HeaderButton.css"
+import { CartContext } from '../../Contexts/CartProvider';
 
 const HeaderButton = () => {
+    const { showCartHandler } = useContext(CartContext);
   return (
-        <button className="cartBtn">
+        <button className="cartBtn" onClick={showCartHandler}>
             <span className="cart-icon">
                 <i className="fa-solid fa-cart-shopping"></i>
             </span>

@@ -1,18 +1,21 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import './Cart.css'
-import OffCanvas from '../General/OffCanvas'
+import CartItems from './CartItems'
+import { CartContext } from '../../Contexts/CartProvider';
+import OffCanvas from '../General/OffCanvas';
 
 
 const Cart = () => {
+  const { hideCartHandle } = useContext(CartContext);
   return (
-   <div className='OffCanvas'>
-     <div className="content">
-        <div className="cart">
-            <div className="card-header">
+    <OffCanvas hideCartHandle={hideCartHandle}>
+      <div className="content">
+     <div className="cart">
+          <div className="cart-header">
                 <h2>Cart</h2>
-                <a href="/">X</a>
-            </div>
-            ergt
+                <a href="/" onClick={hideCartHandle}>X</a>
+           </div>
+            <CartItems/>
             <div className="cart-total">
                 <span>Total</span>
                 <span>$100</span>
@@ -22,8 +25,8 @@ const Cart = () => {
                 <button className="cart-clear">Clear</button>
             </div>
         </div>
-     </div>
-    </div>
+        </div>
+    </OffCanvas>
   )
 }
 
