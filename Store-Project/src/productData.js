@@ -14,7 +14,7 @@ const products = [
         description : "A latest model iphone",
         price : 800,
         stock : 15,
-        rating : 4.5,
+        rating : 5,
         image : "/images/products/iphone.png"
     },
     {
@@ -23,7 +23,7 @@ const products = [
         description : "A powerful desktop computer",
         price : 600,
         stock : 5,
-        rating : 4,
+        rating : 3,
         image : "/images/products/desktop.png"
     },
     {
@@ -32,7 +32,7 @@ const products = [
         description : "A stylish LG TV",
         price : 300,
         stock : 20,
-        rating : 4.8,
+        rating : 5,
         image : "/images/products/lg-tv.png"
     },
     {
@@ -41,7 +41,7 @@ const products = [
         description : "A latest model Samsung smartphone",
         price : 200,
         stock : 25,
-        rating : 4.7,
+        rating : 4,
         image : "/images/products/samsung.png"
     }
 ]

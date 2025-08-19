@@ -5,6 +5,17 @@ const CartContext = createContext()
 const CartProvider = ({ children }) => {
     const [cartIsShown, setCartIsShown] = useState(false);
     const [cartList, setCartList] = useState([]);
+    const [cartTotalPrice, setCartTotalPrice] = useState(0);
+
+
+    useEffect(() => {
+      calculateTotal();
+    }, [cartList]);
+
+
+    const clearCartList = () => {
+      setCartList([]);
+    };
 
     const showCartHandle = () => {
       setCartIsShown(true);
@@ -18,28 +29,36 @@ const CartProvider = ({ children }) => {
       const isThereProduct = cartList.find(item => item.id === product.id);
       if (isThereProduct) {
         const newCartList = cartList.map(item => item.id === product.id ? {
-          ...item, amount: item.amount + 1 }: item)
-          setCartList(newCartList);
-        }else{
-          setCartList([...cartList, {...product, amount: 1}]);
-        }
+          ...item, amount: item.amount + 1 } : item);
+        setCartList(newCartList);
+      } else {
+        setCartList([...cartList, {...product, amount: 1}]);
       }
-      setCartList([...cartList, product]);
     };
 
-    useEffect(() => {
-      console.log(cartList);
-    }, [cartList]);
 
+    const calculateTotal = () => {
+      const total = cartList.reduce((accumulator,current) => {
+        return accumulator + (current.price * current.amount)},0);
+      setCartTotalPrice(total);
+    };
+
+    const removeItemFromCart = (product) => {
+      const removeAfterCart = cartList.filter(item => item.id !== product.id);
+      setCartList(removeAfterCart);
+    };
 
     const values = {
       cartIsShown,
       setCartIsShown,
       cartList,
+      cartTotalPrice,
       setCartList,
       hideCartHandle,
       showCartHandle,
-      addToCart
+      addToCart,
+      clearCartList,
+      removeItemFromCart
     };
   return (
     <CartContext.Provider value={values}>
