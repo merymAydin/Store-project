@@ -1,17 +1,17 @@
 import React from 'react'
 import './CartItem.css'
 
-const CartItem = () => {
+const CartItem = ({ item }) => {
   return (
     <div className='cart-item'>
         <div className="cart-item-image">
-            <img src="/images/products/laptop.png" alt="laptop" />
+            <img src={item.image} alt={item.name} />
         </div>
         <div className="cart-item-info">
             <div className="cart-item-text">
-                <strong>Laptop</strong>
+                <strong>{item.name}</strong>
                 <div>
-                    <span>₺ 1500 X </span>
+                    <span>₺ {item.price} X </span>
                     <span>1</span>
                 </div>
             </div>
