@@ -1,6 +1,6 @@
 # Store Project
 
-This is a web-based store project built with JavaScript, CSS, and HTML.
+A web-based store application built with **React**, JavaScript, CSS, and HTML.
 
 ## Features
 
@@ -8,12 +8,14 @@ This is a web-based store project built with JavaScript, CSS, and HTML.
 - Shopping cart functionality
 - Responsive design
 - User-friendly interface
+- Built using React components
 
 ## Technologies Used
 
-- **JavaScript** (65.8%)
-- **CSS** (31.5%)
-- **HTML** (2.7%)
+- **React**
+- **JavaScript** 
+- **CSS** 
+- **HTML** 
 
 ## Getting Started
 
@@ -23,10 +25,4 @@ This is a web-based store project built with JavaScript, CSS, and HTML.
     ```
 2. Open `index.html` in your browser to view the store.
 
-## Contributing
 
-Contributions are welcome! Please fork the repository and submit a pull request.
-
-## License
-
-This project is licensed under the MIT License.
