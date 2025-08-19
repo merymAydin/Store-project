@@ -12,7 +12,7 @@ const CartItem = ({ item }) => {
                 <strong>{item.name}</strong>
                 <div>
                     <span>₺ {item.price} X </span>
-                    <span>1</span>
+                    <span>{item.amount}</span>
                 </div>
             </div>
             <a href="/" className='cart-item-remove'>x</a>

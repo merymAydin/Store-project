@@ -15,6 +15,15 @@ const CartProvider = ({ children }) => {
     };
 
     const addToCart = (product) => {
+      const isThereProduct = cartList.find(item => item.id === product.id);
+      if (isThereProduct) {
+        const newCartList = cartList.map(item => item.id === product.id ? {
+          ...item, amount: item.amount + 1 }: item)
+          setCartList(newCartList);
+        }else{
+          setCartList([...cartList, {...product, amount: 1}]);
+        }
+      }
       setCartList([...cartList, product]);
     };
 
